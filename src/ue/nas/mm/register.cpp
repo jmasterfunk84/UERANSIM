@@ -97,7 +97,7 @@ EProcRc NasMm::sendInitialRegistration(EInitialRegCause regCause)
         request->requestedNSSAI = nas::utils::NssaiFrom(requestedNssai);
     request->ueSecurityCapability = createSecurityCapabilityIe();
     request->updateType =
-        nas::IE5gsUpdateType(nas::ESmsRequested::NOT_SUPPORTED, nas::ENgRanRadioCapabilityUpdate::NOT_NEEDED);
+        nas::IE5gsUpdateType(nas::ESmsRequested::SUPPORTED, nas::ENgRanRadioCapabilityUpdate::NOT_NEEDED);
 
     // Assign ngKSI
     if (m_usim->m_currentNsCtx)
