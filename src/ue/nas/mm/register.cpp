@@ -197,7 +197,7 @@ EProcRc NasMm::sendMobilityRegistration(ERegUpdateCause updateCause)
 
     // Assign update type
     request->updateType = nas::IE5gsUpdateType{};
-    request->updateType->smsRequested = nas::ESmsRequested::NOT_SUPPORTED;
+    request->updateType->smsRequested = nas::ESmsRequested::SUPPORTED;
     request->updateType->ngRanRcu = updateCause == ERegUpdateCause::RADIO_CAP_CHANGE
                                         ? nas::ENgRanRadioCapabilityUpdate::NEEDED
                                         : nas::ENgRanRadioCapabilityUpdate::NOT_NEEDED;
