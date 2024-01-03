@@ -106,7 +106,7 @@ void NasMm::sendSMS()
     if (m_mmState == EMmState::MM_NULL)
         return;
 
-    m_logger->debug("We should send an SMS [%s]", ToJson(cause).str().c_str());
+    m_logger->debug("We should send an SMS");
 }
 
 
