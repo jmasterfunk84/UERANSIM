@@ -39,7 +39,7 @@ void NasMm::receiveDlNasTransport(const nas::DlNasTransport &msg)
 {
     m_timers->t3346.stop();
 
-    if (msg.payloadContainerType.payloadContainerType != nas::EPayloadContainerType::SMS)
+    if (msg.payloadContainerType.payloadContainerType == nas::EPayloadContainerType::SMS)
     {
         m_logger->err("Someone just got an SMS!");
         return;
