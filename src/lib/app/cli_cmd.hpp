@@ -56,6 +56,7 @@ struct UeCliCommand
         DE_REGISTER,
         RLS_STATE,
         COVERAGE,
+        SEND_SMS,
     } present;
 
     // DE_REGISTER

@@ -267,6 +267,9 @@ void UeCmdHandler::handleCmdImpl(NmUeCliCommand &msg)
         sendResult(msg.address, json.dumpYaml());
         break;
     }
+    case app::UeCliCommand::SEND_SMS: {
+        m_base->nasTask->mm->sendSMS();
+    }
     }
 }
 
