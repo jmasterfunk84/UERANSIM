@@ -198,7 +198,7 @@ class NasMm
     void serviceRequestRequiredForSignalling();
     void serviceRequestRequired(EServiceReqCause cause);
     void deregistrationRequired(EDeregCause cause);
-    void sendSMS(string msisdn);
+    void sendSMS(std::string msisdn);
     void invokeProcedures();
     bool hasPendingProcedure();
 

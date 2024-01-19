@@ -268,8 +268,7 @@ void UeCmdHandler::handleCmdImpl(NmUeCliCommand &msg)
         break;
     }
     case app::UeCliCommand::SEND_SMS: {
-        msg.cmd->msisdn;
-        m_base->nasTask->mm->sendSMS(msisdn);
+        m_base->nasTask->mm->sendSMS(msg.cmd->msisdn);
         sendResult(msg.address, "Sending an SMS");
         break;
     }
