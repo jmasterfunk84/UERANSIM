@@ -71,6 +71,9 @@ struct UeCliCommand
     std::optional<std::string> apn{};
     bool isEmergency{};
 
+    // SEND_SMS
+    std::optional<std::string> msisdn{};
+
     explicit UeCliCommand(PR present) : present(present)
     {
     }
