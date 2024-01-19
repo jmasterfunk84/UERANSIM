@@ -101,15 +101,6 @@ void NasMm::deregistrationRequired(EDeregCause cause)
     triggerMmCycle();
 }
 
-void NasMm::sendSMS()
-{
-    if (m_mmState == EMmState::MM_NULL)
-        return;
-
-    m_logger->debug("We should send an SMS");
-}
-
-
 void NasMm::serviceRequestRequiredForSignalling()
 {
     serviceRequestRequired(EServiceReqCause::IDLE_UPLINK_SIGNAL_PENDING);

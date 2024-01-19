@@ -337,7 +337,7 @@ static std::unique_ptr<UeCliCommand> UeCliParseImpl(const std::string &subCmd, c
         auto cmd = std::make_unique<UeCliCommand>(UeCliCommand::SEND_SMS);
 
         if (options.hasFlag('m', "msisdn"))
-            cmd->apn = options.getOption('m', "msisdn");
+            cmd->msisdn = options.getOption('m', "msisdn");
         return cmd;
     }
 
